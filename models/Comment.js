@@ -43,4 +43,6 @@ Comment.init(
   }
 );
 
+// "id", "comment_text", "post_id", "user_id", "created_at"
+
 module.exports = Comment;

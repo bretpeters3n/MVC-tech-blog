@@ -14,6 +14,9 @@ const helpers = require("./utils/helpers");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// Incorporate the custom helper methods
+const hbs = exphbs.create({ helpers });
+
 // Set up sessions with cookies
 const sess = {
   secret: "Super secret secret",
@@ -29,9 +32,6 @@ const sess = {
 };
 
 app.use(session(sess));
-
-// Incorporate the custom helper methods
-const hbs = exphbs.create({ helpers });
 
 // get handlebars up and running
 app.engine("handlebars", hbs.engine);

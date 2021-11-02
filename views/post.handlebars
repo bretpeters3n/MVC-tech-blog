@@ -1,0 +1,14 @@
+{{!-- {{> post-info post}} --}}
+
+{{!-- {{#if loggedIn}} --}}
+<div class="card">
+  <div class="card-header">
+    <div class="homepage-posts">
+      <div>{{post.title}}</div>
+      <div>Posted by {{post.user.username}}</div>
+    </div>
+  </div>
+  <div class="card-body">
+    <p>{{post.post_content}}</p>
+  </div>
+</div>
