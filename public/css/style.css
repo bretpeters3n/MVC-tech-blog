@@ -29,3 +29,8 @@ header,
   flex-direction: row;
   justify-content: space-between;
 }
+
+textarea {
+  display: block;
+  width: 100%;
+}

@@ -1,14 +1,23 @@
-{{!-- {{> post-info post}} --}}
 
-{{!-- {{#if loggedIn}} --}}
 <div class="card">
   <div class="card-header">
     <div class="homepage-posts">
       <div>{{post.title}}</div>
-      <div>Posted by {{post.user.username}}</div>
+      <div>Posted by {{post.user.username}} on {{format_date created_at}}</div>
     </div>
   </div>
   <div class="card-body">
     <p>{{post.post_content}}</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="homepage-posts">
+      <div> </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <p>{{post.comment.comment-text}}</p>
   </div>
 </div>

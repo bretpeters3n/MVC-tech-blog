@@ -3,7 +3,7 @@ const { Comment } = require("../../models");
 const sequelize = require("../../config/connection");
 const withAuth = require("../../utils/auth");
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   Comment.findAll({})
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", async (req, res) => {
   Comment.findAll({
     where: {
       id: req.params.id,
@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", withAuth, (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   if (req.session) {
     // Builds a new comment model instance and saves it
     Comment.create({
@@ -41,7 +41,7 @@ router.post("/", withAuth, (req, res) => {
   }
 });
 
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   Comment.update(
     {
       comment_text: req.body.comment_text,
@@ -65,7 +65,7 @@ router.put("/:id", withAuth, (req, res) => {
     });
 });
 
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   Comment.destroy({
     where: {
       id: req.params.id,

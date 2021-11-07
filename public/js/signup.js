@@ -14,7 +14,7 @@ const signupFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      console.log("success");
+      console.log("signup success!");
 
       document.location.replace("/dashboard");
     } else {
@@ -24,5 +24,5 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector("#signup-form")
+  .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
