@@ -14,7 +14,6 @@
 
 ![license](https://img.shields.io/badge/license-MIT-red) 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -28,7 +27,7 @@
   <p align="center">
     <img src="https://img.shields.io/badge/HTML-orange"/>
     <img src="https://img.shields.io/badge/CSS-yellow"/>
-    <img src="https://img.shields.io/badge/Bulma-blue"/>
+    <!--<img src="https://img.shields.io/badge/Bulma-blue"/>-->
     <img src="https://img.shields.io/badge/Javascript-indigo"/>
     <!--<img src="https://img.shields.io/badge/jQuery-violet"/>-->
     <img src="https://img.shields.io/badge/-Node.js-violet"/>
@@ -89,7 +88,7 @@ Issues will be fixed when I convert this to a React app in the future.
 
 <!-- BUILT WITH -->
 ### Built With
-<!--* HTML
+* HTML
 * CSS-->
 * Javascript
 * [NodeJS](https://nodejs.org/en/)
